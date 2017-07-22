@@ -1,0 +1,23 @@
+Alright, listen up: 
+
+1. First, get Unity. This version was made in 5.6.1, so get that one.
+2. Once you've got that installed, extract the "-STHG- Level Development Kit" folder to wherever.
+3. Start Unity, open a project and direct it to the Root of the "-STHG- Level Development Kit" folder.
+4. Once everything's loaded, open the TestStage scene if it isn't already.
+5. Make a backup of the Test Stage before you start fucking with it.
+6. Here's the basic controls for getting around in Unity's Scene window just in case you're too stupid to look up a tutorial:
+	Right Click + WASD to move
+	Right Click + EQ to go up and down
+	Click on stuff to highlight it
+	Hit F to zoom in on highlighted stuff
+	Hit W to move highlighted stuff
+	Hit E to rotate highlighted stuff
+	Hit R to scale highlighted stuff
+	CRTL + D to duplicate highlighted stuff
+7. Don't know how to do something, or want to learn how to implement something new? Either Google it, or go to the Discord: https://discord.gg/fR2mmSn
+
+It might take a bit to open up for the first time, but after that it should be faster.
+
+Alright, I'm out. Bump has some other tips for you in the Test Stage, so go bother her. Make something that doesn't suck, got it? Good. 
+
+	~Sage the Sloth
