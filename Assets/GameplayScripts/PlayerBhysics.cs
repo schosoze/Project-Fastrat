@@ -68,6 +68,7 @@ public class PlayerBhysics : MonoBehaviour {
     public float RollingUphillBoost;
     public float RollingStartSpeed;
     public float RollingTurningDecreace;
+	public float RollingFlatDecell;
     public bool isRolling { get; set; }
 
     //Cache
@@ -114,6 +115,7 @@ public class PlayerBhysics : MonoBehaviour {
 
     void InputChecks()
     {
+		Debug.Log (b_normalSpeed);
         //Rolling
         if (Input.GetButton("R1") && rigidbody.velocity.sqrMagnitude > RollingStartSpeed)
         {
@@ -274,7 +276,7 @@ public class PlayerBhysics : MonoBehaviour {
                 }
                 else
                 {
-                    normalSpeed += 0 * deltaTime * inputMagnitude;
+					normalSpeed -= RollingFlatDecell * deltaTime * inputMagnitude;
                     normalSpeed = Mathf.Min(normalSpeed, TopSpeed);
                 }
 
@@ -304,7 +306,8 @@ public class PlayerBhysics : MonoBehaviour {
             else
             {
                 tangentVelocity = Vector3.MoveTowards(tangentVelocity, Vector3.zero,
-                    ((TangentialDrag * RollingTurningDecreace) * TangDragOverSpeed.Evaluate(curvePosTang)) * deltaTime * inputMagnitude);
+                  ((TangentialDrag * RollingTurningDecreace) * TangDragOverSpeed.Evaluate(curvePosTang)) * deltaTime * inputMagnitude);
+
 
             }
 
@@ -351,11 +354,16 @@ public class PlayerBhysics : MonoBehaviour {
         // Call Ground Control
         HandleGroundControl(1 , MoveInput * curvePosAcell);
         
-        //Reduce speed
-        if (MoveInput == Vector3.zero)
+        //Reduce speed if stick is free
+		if (MoveInput == Vector3.zero && !isRolling)
         {
             rigidbody.velocity = rigidbody.velocity / MoveDecell;
         }
+
+		if (isRolling)
+		{
+			rigidbody.velocity = rigidbody.velocity / RollingFlatDecell;
+		}
 
         //Set magnitude reference variable
         SpeedMagnitude = rigidbody.velocity.magnitude;
@@ -416,7 +424,7 @@ public class PlayerBhysics : MonoBehaviour {
             }
             else
             {
-                if (MoveInput != Vector3.zero && b_normalSpeed > 0)
+                if (b_normalSpeed > 0)
                 {
                     if (!isRolling)
                     {

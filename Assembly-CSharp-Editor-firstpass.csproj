@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{E75542EF-73F6-CE4A-FA45-C681A7FD25A1}</ProjectGuid>
+    <ProjectGuid>{9BAACCEE-773A-C867-F7D0-5A64D0070BB2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor-firstpass</AssemblyName>
@@ -260,15 +260,15 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="TextMeshPro-1.0.55.56.0b10">
- <HintPath>C:/Users/Schosoze/Downloads/-STHG- Level Development Kit V 3.0(1)/-STHG- Level Development Kit/Assets/TextMesh Pro/Plugins/TextMeshPro-1.0.55.56.0b10.dll</HintPath>
+ <HintPath>C:/Users/Schosoze/Documents/PROJECTFASTRAT/Assets/TextMesh Pro/Plugins/TextMeshPro-1.0.55.56.0b10.dll</HintPath>
  </Reference>
  <Reference Include="TextMeshPro-1.0.55.56.0b10-Editor">
- <HintPath>C:/Users/Schosoze/Downloads/-STHG- Level Development Kit V 3.0(1)/-STHG- Level Development Kit/Assets/TextMesh Pro/Plugins/Editor/TextMeshPro-1.0.55.56.0b10-Editor.dll</HintPath>
+ <HintPath>C:/Users/Schosoze/Documents/PROJECTFASTRAT/Assets/TextMesh Pro/Plugins/Editor/TextMeshPro-1.0.55.56.0b10-Editor.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{01EC80F3-67C9-FF91-2850-96C39E59D949}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{DB40BF86-2568-669B-B0CC-8C8A11464067}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
